@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'master'} // Indica que se ejecute en el nodo principal [cite: 12]
+    agent any // Indica que se ejecute en el nodo principal [cite: 12]
     stages {
         stage ('test') { 
             steps {
