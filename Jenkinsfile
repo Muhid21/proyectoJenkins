@@ -2,7 +2,7 @@ pipeline {
     agent any // Indica que se ejecute en el nodo principal
     
     tools {
-        maven 'maven' // Define la herramienta antes de los stages
+        maven 'Maven' // Define la herramienta antes de los stages
     }
 
     stages {
