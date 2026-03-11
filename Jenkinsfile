@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage ('test') {
             steps {
-                sh "mvn clean compile test" // Ejecuta tus pruebas unitarias
+                sh "/opt/Maven/bin/mvn clean compile test" // Ejecuta tus pruebas unitarias
             }
         }
         stage ('Build application') {
             steps {
-                sh "mvn -f pom.xml clean install -Dmaven.test.skip=true" // Empaqueta omitiendo tests
+                sh "/opt/Maven/bin/mvn -f pom.xml clean install -Dmaven.test.skip=true" // Empaqueta omitiendo tests
             }
         }
         stage ('Pasamos a producción') {
